@@ -1,0 +1,14 @@
+#!/bin/bash
+
+rclocal_path="/etc/rc.local"
+startup_comment="Make an attempt to get touchy Monit setups to start correctly (looking at you BOSH!)"
+startup_path="/var/vcap/jobs/reboot-patch/bin/startup.sh"
+patch_flag="/root/reboot-patch-done"
+
+# We only want to do this once.
+if [ ! -f ${patch_flag} ]
+then
+	# Crazy sed statement; use Google-fu for details!
+	sed -i -E "s,^(#!.*),\1\n# ${startup_comment}\n${startup_path}\n," ${rclocal_path}
+	touch ${patch_flag}
+fi

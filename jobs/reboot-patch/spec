@@ -1,0 +1,10 @@
+---
+name: reboot-patch
+
+templates:
+  pre-start: bin/pre-start
+  startup.sh: bin/startup.sh
+
+packages: []
+
+properties: {}

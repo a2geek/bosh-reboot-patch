@@ -12,3 +12,6 @@ releases/**/*.tgz
 *~
 *#
 #*
+
+# Development files
+/bosh-reboot-patch.tgz
