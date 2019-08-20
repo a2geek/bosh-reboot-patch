@@ -1,0 +1,10 @@
+name: bosh-reboot-patch
+version: "1"
+commit_hash: fd3186e
+uncommitted_changes: true
+jobs:
+- name: reboot-patch
+  version: d041ebedc1cc3de17456e641cbeaf62be684fe64543d058d6b666c1531ea354b
+  fingerprint: d041ebedc1cc3de17456e641cbeaf62be684fe64543d058d6b666c1531ea354b
+  sha1: sha256:9b93647ebeaacbde79c8f9cb715de88a679bc523306e2c2a7948e7504d4f56f5
+  packages: []
