@@ -1,0 +1,14 @@
+---
+- type: replace
+  path: /releases/-
+  value:
+    name: bosh-reboot-patch
+    url: https://github.com/a2geek/bosh-reboot-patch/releases/download/v1/bosh-reboot-patch.tgz
+    version: v1
+    sha1: e9257c2febddac1cb772de1b798c7d24aa6be6d7
+
+- type: replace
+  path: /instance_groups/name=bosh/jobs/-
+  value:
+    name: reboot-patch
+    release: bosh-reboot-patch

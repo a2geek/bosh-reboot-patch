@@ -1,0 +1,10 @@
+
+releases:
+- name: bosh-reboot-patch
+  url: file:///home/rob/Documents/Source/bosh-reboot-patch/bosh-reboot-patch.tgz
+
+addons:
+- name: bosh-reboot-patch
+  jobs:
+  - name: reboot-patch
+    release: bosh-reboot-patch
