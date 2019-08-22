@@ -1,6 +1,6 @@
 # BOSH Reboot Patch
 
-> NOTE: This should no longer be required unless you are running from an older copy of [bosh-deployment](https://github.com/cloudfoundry/bosh-deployment). See cloudfoundry/bosh#2131 for details.
+> NOTE: This should no longer be required unless you are running from an older copy of [bosh-deployment](https://github.com/cloudfoundry/bosh-deployment). See [this issue](https://github.com/cloudfoundry/bosh/issues/2131) for details.
 
 The BOSH Director (and some BOSH deployments) don't always start up successfully after a reboot (intentional or not). The solution seems to be just a simple `monit stop all` followed by a `monit start all`. _BOSH Reboot Patch_ injects that into `/etc/rc.local`.
 
